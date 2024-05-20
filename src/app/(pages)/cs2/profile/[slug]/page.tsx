@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { CS2Profile } from '@/app/parsers/Valve/CS2/CS2Profile';
 
-const CS2ProfilePage = ({ params }) => {
+const CS2ProfilePage = () => {
 
   return (
     <div>
