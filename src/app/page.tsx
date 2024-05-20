@@ -13,6 +13,7 @@ export default function Home() {
 			<Navbar />
       <SearchBar/>
 			<HeroSection />
+      {/* Welcome To RiotTracker */}
 		</main>
 	);
 }
