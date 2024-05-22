@@ -54,11 +54,7 @@ const Navbar = async (props: Props) => {
 					</li>
 					<Separator />
 					<li className=" hover:bg-slate-700  px-4 cursor-pointer">
-						<Link href="#">Valorant</Link>
-					</li>
-					<Separator />
-					<li className="hover:bg-slate-700 px-4 cursor-pointer">
-						{comingSoon()}
+						<Link href="#">Counter-Strike 2</Link>
 					</li>
 					<Separator />
 					<li className=" hover:bg-slate-700 px-4 cursor-pointer">
@@ -70,6 +66,11 @@ const Navbar = async (props: Props) => {
 					</li>
 					<Separator />
 					<li className=" hover:bg-slate-700 px-4 cursor-pointer">
+						<Link href="#">Counter-Strike 2</Link>
+					</li>
+
+					<Separator />
+					<li className=" hover:bg-slate-700 px-4 cursor-pointer">
 						<Link href="#">Valorant</Link>
 					</li>
 					<Separator />
@@ -77,6 +78,9 @@ const Navbar = async (props: Props) => {
 						{comingSoon()}
 					</li>
 					<Separator />
+					<li className=" hover:bg-slate-700  px-4 cursor-pointer">
+						<Link href="#">Counter-Strike 2</Link>
+					</li>
 				</ul>
 			</nav>
 			<aside className="flex items-center gap-4">
