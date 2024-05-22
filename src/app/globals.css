@@ -64,7 +64,10 @@
     --ring: 0 0% 83.1%;
   }
 }
-
+body{
+  display: flex;
+  flex-direction: column
+}
 @layer base {
   * {
     @apply border-border;

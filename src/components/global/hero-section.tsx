@@ -1,36 +1,45 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
+import Link from "next/link";
+
 import products from "@/lib/dummy-data";
 interface Props {}
 
 const HeroSection = (props: Props) => {
 	return (
-		<div className="">
-			<div className="mx-auto px-8 max-w-2xl  py-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-				<h2 className="sr-only">Products</h2>
-
-				<div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-					{products.map((product) => (
-						<a
-							key={product.id}
-							href={product.href}
-							className="group"
+		<div className="flex flex-wrap gap-[30px] py-[100px] justify-center">
+			{products.map((product) => (
+				<CardContainer
+					key={product.id}
+					className="inter-var"
+				>
+					<CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[15rem]     h-[442px] rounded-xl p-6 border">
+						<CardItem
+							translateZ="100"
+							className="w-full mt-4"
 						>
-							<div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-								<img
-									src={product.imageSrc}
-									alt={product.imageAlt}
-									className="h-full w-full object-cover object-center group-hover:opacity-75"
-								/>
-							</div>
-							<h3 className="mt-4 text-sm text-gray-200">{product.name}</h3>
-							<p className="mt-1 text-lg font-medium text-gray-300">
-								{product.price}
-							</p>
-						</a>
-					))}
-				</div>
-			</div>
+							<Image
+								src={product.imageSrc}
+								alt={product.imageAlt}
+								height="1000"
+								width="1000"
+								className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+							/>
+						</CardItem>
+						<div className="flex justify-between items-center mt-20">
+							<CardItem
+								translateZ="50"
+								className="text-xl font-bold text-neutral-600 dark:text-white"
+							>
+								{product.name}
+							</CardItem>
+						</div>
+					</CardBody>
+				</CardContainer>
+			))}
 		</div>
 	);
 };
