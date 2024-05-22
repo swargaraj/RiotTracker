@@ -33,15 +33,15 @@ const Navbar = async (props: Props) => {
 	return (
 		<header className="fixed right-0 left-0 top-0  px-4 bg-black/40 backdrop-blur-lg z-[100] flex items-center border-b-[1px] border-neutral-900 justify-between">
 			<aside className="flex items-center gap-[2px]">
-				<p className=" text-3xl font-bold">Na</p>
+				<p className=" text-3xl font-bold">Sta</p>
 				<Image
-					src="/favicon_io/favicon-16x16.png"
+					src="/favicon_io/favicon-32x32.png"
 					width={15}
 					height={15}
 					alt="fuzzi logo"
 					className="shadow-sm"
 				/>
-				<p className="text-3xl font-bold">Me</p>
+				<p className="text-3xl font-bold">Tzz</p>
 			</aside>
 			<nav className="  h-[50%} flex  w-[80%] overflow-x-scroll ">
 				<ul className="flex items-center align-middle list-none">
