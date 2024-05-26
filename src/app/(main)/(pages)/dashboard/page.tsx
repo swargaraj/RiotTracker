@@ -1,4 +1,5 @@
 import Navbar from "@/components/global/navbar";
+
 import React from "react";
 
 const DashboardPage = () => {
