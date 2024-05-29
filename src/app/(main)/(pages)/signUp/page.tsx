@@ -30,6 +30,7 @@ interface Props {
 	user: {
 		name: string;
 		email: string;
+		password: string;
 	} | null;
 }
 
@@ -61,32 +62,13 @@ export default function InputForm({ user }: Props) {
 
 			<div className="flex flex-col items-center justify-center ">
 				<h1 className="text-4xl mt-[40px] p-6 bg-background/50 backdrop-blur-lg border-b text-center">
-					Sign Up Into The New World
+					Sign In Into The New World
 				</h1>
 				<Form {...form}>
 					<form
 						onSubmit={form.handleSubmit(onSubmit)}
 						className="w-2/3 space-y-6 mt-[5rem]"
 					>
-						<FormField
-							control={form.control}
-							name="name"
-							render={({ field }) => (
-								<FormItem>
-									<FormLabel>Username</FormLabel>
-									<FormControl>
-										<Input
-											placeholder="UserName"
-											{...field}
-										/>
-									</FormControl>
-									<FormDescription>
-										This is your public display name.
-									</FormDescription>
-									<FormMessage />
-								</FormItem>
-							)}
-						/>
 						<FormField
 							control={form.control}
 							name="email"
