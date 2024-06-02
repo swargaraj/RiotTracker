@@ -1,4 +1,5 @@
 import Navbar from "@/components/global/navbar";
+import dbConnect from "@/lib/mongodb";
 
 import React from "react";
 

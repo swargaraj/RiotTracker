@@ -9,7 +9,7 @@ export async function getMatch(
 	matchId: string,
 ) {
 	try {
-		const fullMatchId = region + "_" + matchId;
+		const fullMatchId =  matchId;
 		const cluster = regionToCluster(region);
 		if (cluster == PlatformId.ESPORTS) {
 			return { status: 400, message: "Invalid cluster" };
