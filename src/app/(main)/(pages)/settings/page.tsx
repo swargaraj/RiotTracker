@@ -1,5 +1,4 @@
 import { getMatch } from "@/app/handlers/Riot/LoL/getMatch";
-import { getProfile } from "@/app/handlers/Riot/LoL/getProfile";
 import Navbar from "@/components/global/navbar";
 import { toast } from "@/components/ui/use-toast";
 import { PlatformId } from "@fightmegg/riot-api";
