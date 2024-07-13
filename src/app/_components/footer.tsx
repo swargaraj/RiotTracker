@@ -9,7 +9,7 @@ const Footer = () => {
             <span className=" text-2xl font-semibold whitespace-nowrap items-center flex dark:text-white">
               <p className=" text-3xl font-bold">Sta</p>
               <Image
-                src="/favicon_io/favicon-32x32.png"
+                src="/icon.webp"
                 width={15}
                 height={15}
                 alt="fuzzi logo"
@@ -62,7 +62,7 @@ const Footer = () => {
             <a href="" className="hover:underline items-center flex">
               <p className="  font-bold">Sta</p>
               <Image
-                src="/favicon_io/favicon-32x32.png"
+                src="/icon.webp"
                 width={15}
                 height={15}
                 alt="fuzzi logo"
