@@ -1,33 +1,38 @@
 import type { Metadata } from "next";
-import { DM_Sans, Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
+
 import "./globals.css";
-import "./styles/globals.scss";
-import { ThemeProvider } from "@/providers/theam-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
+
+import Navbar from "@/app/_components/navbar";
+import Footer from "@/app/_components/footer";
 
 const font = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "RiotTracker | Game Stats Tracking Solution",
-  description: "Open-Souce Game Stats Tracking Solution",
+  title: "RiotTracker | Game Stats Tracker",
+  description: "Open-Souce Game Stats Tracker",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<body className={font.className }>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="dark"
-					enableSystem
-					disableTransitionOnChange
-				>
-					{children}
-				</ThemeProvider>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body className={font.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+        </ThemeProvider>
+        <Footer />
+      </body>
+    </html>
+  );
 }
